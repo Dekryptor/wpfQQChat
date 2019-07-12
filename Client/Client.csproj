@@ -111,7 +111,6 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Class1.cs" />
     <Compile Include="UserChatWindow.xaml.cs">
       <DependentUpon>UserChatWindow.xaml</DependentUpon>
     </Compile>

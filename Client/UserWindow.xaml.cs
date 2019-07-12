@@ -30,6 +30,11 @@ namespace Client
     /// </summary>
     public partial class UserWindow : Window
     {
+
+        public void aaa()
+        {
+        }
+        
         #region 定义
         Dictionary<string, UserChatWindow> dicChatWindow = new Dictionary<string, UserChatWindow>();
 
