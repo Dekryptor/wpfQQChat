@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Client", "Client\Client.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Server", "Server\Server.csproj", "{D77EF376-8CCA-44D0-A349-EC5C038DC7D6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MessageDLL", "MessageDLL\MessageDLL.csproj", "{A4660677-E8E0-41FA-A317-96A59C649DCC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		AppVeyor|Any CPU = AppVeyor|Any CPU
@@ -26,6 +28,12 @@ Global
 		{D77EF376-8CCA-44D0-A349-EC5C038DC7D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D77EF376-8CCA-44D0-A349-EC5C038DC7D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D77EF376-8CCA-44D0-A349-EC5C038DC7D6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A4660677-E8E0-41FA-A317-96A59C649DCC}.AppVeyor|Any CPU.ActiveCfg = Release|Any CPU
+		{A4660677-E8E0-41FA-A317-96A59C649DCC}.AppVeyor|Any CPU.Build.0 = Release|Any CPU
+		{A4660677-E8E0-41FA-A317-96A59C649DCC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A4660677-E8E0-41FA-A317-96A59C649DCC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A4660677-E8E0-41FA-A317-96A59C649DCC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A4660677-E8E0-41FA-A317-96A59C649DCC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

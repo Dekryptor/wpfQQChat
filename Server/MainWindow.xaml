@@ -6,12 +6,14 @@
         xmlns:local="clr-namespace:Server"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800"
-        Loaded="Window_Loaded">
+        Loaded="Window_Loaded" Closed="Window_Closed">
     <Grid>
         <TextBox x:Name="txtLog" HorizontalAlignment="Left" Height="400" Margin="10,10,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="445"/>
         <Button x:Name="btnStartServer" Content="启动服务器" HorizontalAlignment="Left" Margin="470,10,0,0" VerticalAlignment="Top" Width="96" Height="32"
                 Click="BtnStartServer_Click"/>
         <ComboBox x:Name="cmbSocket" HorizontalAlignment="Left" Margin="470,64,0,0" VerticalAlignment="Top" Width="175"/>
+        <TextBox x:Name="txtMsg" HorizontalAlignment="Left" Height="82" Margin="491,154,0,0" TextWrapping="Wrap" Text="发送消息的文本框" VerticalAlignment="Top" Width="275"/>
+        <Button x:Name="btnSendMsg" Content="发送消息" HorizontalAlignment="Left" Margin="491,262,0,0" VerticalAlignment="Top" Width="75" Click="BtnSendMsg_Click"/>
 
     </Grid>
 </Window>

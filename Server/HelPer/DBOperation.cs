@@ -4,11 +4,11 @@ using System.Linq;
 using System.Net;
 using System.Text;
 using System.Threading.Tasks;
-using Client.DBUtility;
+
 using System.Data;
 using System.Data.SqlClient;
 
-namespace Client.DBUtility
+namespace Server
 {
     class DBOperation
     {

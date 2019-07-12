@@ -1,0 +1,64 @@
+﻿<Window x:Class="Client.UserChatWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:materialDesignConverters="clr-namespace:MaterialDesignThemes.Wpf.Converters;assembly=MaterialDesignThemes.Wpf"
+        xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+
+        xmlns:local="clr-namespace:Client"
+        Title="UserChatWindow" Height="451" Width="537" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20*"/>
+            <RowDefinition Height="210*"/>
+            <RowDefinition Height="20*"/>
+            <RowDefinition Height="100*"/>
+            <RowDefinition Height="40*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="2" 
+                    Margin="0,0,0,0"
+                    Orientation="Horizontal"
+                    >
+            <materialDesign:PackIcon 
+                x:Name="btnSendFile"
+                MouseDown="BtnSendFile_MouseDown"
+                Kind="FileDocumentBoxMultiple" Width="30" Height="20" ToolTip="发送文件"/>
+            <materialDesign:PackIcon 
+                MouseDown="BtnSendFile_MouseDown"
+                Kind="InsertPhoto" Width="30" Height="20" ToolTip="发送图片"/>
+            <materialDesign:PackIcon 
+                x:Name="btnZhenDong"
+                MouseDown='BtnZhenDong_MouseDown'
+                Kind="CardsOutline" Width="30" Height="20" ToolTip="震动"/>
+        </StackPanel>
+        <TextBox x:Name="txtMsgLog" 
+                 VerticalScrollBarVisibility="Visible"
+                 Text="                                                                                                  "
+                 TextWrapping = "Wrap"
+                 Margin="0,0,0,0"  
+                 Width="Auto" Grid.Row="1" IsReadOnly="True"
+                 VerticalContentAlignment="Top"
+                 HorizontalContentAlignment="Left" FontSize="18" 
+                 
+                 />
+        <Button x:Name="btnMsgSend" Content="发送"  Margin="0,8,8,5" Grid.Row="4"  
+                IsDefault="True"
+                Click="BtnMsgSend_Click" HorizontalAlignment="Right" Width="103">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.416"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <TextBox x:Name="txtMsg"  
+                 TextWrapping = "Wrap"
+                 Margin="0,0,0,0" Grid.Row="3"
+                 VerticalContentAlignment="Top"
+                 HorizontalContentAlignment="Left" FontSize="18"/>
+    </Grid>
+</Window>

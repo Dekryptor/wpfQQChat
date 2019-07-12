@@ -17,6 +17,7 @@ using System.Data;
 using System.Data.SqlClient;
 using Client.DBUtility;
 using System.Net;
+using MessageDLL;
 
 namespace Client
 {
@@ -28,7 +29,6 @@ namespace Client
         public MainWindow()
         {
             InitializeComponent();
-
         }
 
         private void BtUserLogin_Click(object sender, RoutedEventArgs e)
@@ -36,21 +36,21 @@ namespace Client
             #region 取来账号和密码的信息
             string userID = TextUserID.Text.Trim().ToString();
             IntPtr p = System.Runtime.InteropServices.Marshal.SecureStringToBSTR(this.TextUserPassword.SecurePassword);
-            string userPassword= System.Runtime.InteropServices.Marshal.PtrToStringBSTR(p);
+            string userPassword = System.Runtime.InteropServices.Marshal.PtrToStringBSTR(p);
             #endregion
 
             #region 连接数据库 完成登录验证
-            SqlConnection sqlConnection = new SqlConnection(ConfigManager.ConnectStr);
+            SqlConnection sqlConnection = new SqlConnection(ConfigManager.ConnectStr);//数据库对象
+
             try
             {
-
                 sqlConnection.Open();
                 string sql = "select * from userInfo where userID=@userID and userPassword=@userPassword ";
-                SqlParameter[] parameters = new SqlParameter[2] 
+                SqlParameter[] parameters = new SqlParameter[2]
                 { new SqlParameter("@userID", userID),
                     new SqlParameter("@userPassword", userPassword) };
                 DataTable dataSet = SqlHelper.ExcuteTable(sql, CommandType.Text, parameters);
-                sqlConnection.Close();
+                sqlConnection.Close();//关闭数据库
 
                 #region 对返回的数据进行判断用户是否成功登录
                 if (dataSet.Rows.Count == 0)
@@ -62,6 +62,9 @@ namespace Client
                     #region 完成用户信息的读取
                     UserInfo.UserID = dataSet.Rows[0][0].ToString();
                     UserInfo.UserName = dataSet.Rows[0][2].ToString();
+                    UserInfo.UserPhone = dataSet.Rows[0][3].ToString();
+                    UserInfo.UserMail = dataSet.Rows[0][4].ToString();
+                    UserInfo.UserProfession = dataSet.Rows[0][5].ToString();
                     #endregion
 
                     #region 跳转用户用户界面，关闭登录窗口
@@ -73,6 +76,7 @@ namespace Client
                     //写入日志
                     string log = string.Format("用户：{0}，登录该系统成功，登录ip:{1}\n", userID, IPAddress.Loopback);
                     WriteLog(log);
+
                 }
                 #endregion
 
@@ -107,6 +111,13 @@ namespace Client
             }
             catch { }
             
+        }
+        private void Window_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            if (e.LeftButton == MouseButtonState.Pressed)
+            {
+                this.DragMove();
+            }
         }
         #endregion
         #region 写系统日志的方法
@@ -145,7 +156,13 @@ namespace Client
                 }
             }
         }
+
+
         #endregion
 
+        private void BtnRegister_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
