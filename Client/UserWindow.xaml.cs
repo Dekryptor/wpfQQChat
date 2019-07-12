@@ -35,6 +35,11 @@ namespace Client
         {
         }
         
+        public void bb()
+        {
+
+        }
+
         #region 定义
         Dictionary<string, UserChatWindow> dicChatWindow = new Dictionary<string, UserChatWindow>();
 
