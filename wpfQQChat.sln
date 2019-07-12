@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.645
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Client", "Client\Client.csproj", "{1200651B-4338-4C21-90F6-5194A1F34750}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Server", "Server\Server.csproj", "{D77EF376-8CCA-44D0-A349-EC5C038DC7D6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		AppVeyor|Any CPU = AppVeyor|Any CPU
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1200651B-4338-4C21-90F6-5194A1F34750}.AppVeyor|Any CPU.ActiveCfg = Release|Any CPU
+		{1200651B-4338-4C21-90F6-5194A1F34750}.AppVeyor|Any CPU.Build.0 = Release|Any CPU
+		{1200651B-4338-4C21-90F6-5194A1F34750}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1200651B-4338-4C21-90F6-5194A1F34750}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1200651B-4338-4C21-90F6-5194A1F34750}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1200651B-4338-4C21-90F6-5194A1F34750}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D77EF376-8CCA-44D0-A349-EC5C038DC7D6}.AppVeyor|Any CPU.ActiveCfg = Release|Any CPU
+		{D77EF376-8CCA-44D0-A349-EC5C038DC7D6}.AppVeyor|Any CPU.Build.0 = Release|Any CPU
+		{D77EF376-8CCA-44D0-A349-EC5C038DC7D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D77EF376-8CCA-44D0-A349-EC5C038DC7D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D77EF376-8CCA-44D0-A349-EC5C038DC7D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D77EF376-8CCA-44D0-A349-EC5C038DC7D6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9EDFF7F5-FA0E-4B96-9003-FF18CA367158}
+	EndGlobalSection
+EndGlobal
